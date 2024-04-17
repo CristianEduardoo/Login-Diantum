@@ -1,0 +1,231 @@
+/* ------------------------------------- GLOBALES --------------------------------------- */
+html {
+  font-size: 62.5%; /* truco para formatear la pag y usar la unidad de medida rem, en html y body */
+  box-sizing: border-box; /* box-sizing, Vine de PaulIrishWeb para facilitar el modelo caja en css "box model"  */
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 16px; /* Con estas 2 lineas (html y body) ya podemos escribir codigo en rem. 1rem = 10px... 60px=6rem */
+  padding: 0; /* Eliminar el padding */
+  margin: 0; /* Eliminar el margin */
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-family: "Smooch Sans";
+  font-weight: 700;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: 7rem;
+}
+
+p {
+  text-align: center;
+  margin-top: 0rem;
+}
+
+/* ------------------------------------------------------------------------------------- */
+.principal {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .principal {
+    gap: 4rem;
+  }
+}
+
+.section1 {
+  width: 100%;
+  margin: 0 auto;
+  grid-row: 2/3;
+}
+
+/* .section2 img {
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
+  height: 15rem;
+}
+*/
+
+@media (min-width: 992px) {
+  .principal {
+    display: flex;
+    gap: 0rem;
+    margin: 3rem auto;
+  }
+
+  .section1 {
+    max-width: 50%;
+    width: 100%;
+  }
+
+  .section2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+    width: 100%;
+  }
+}
+
+.form {
+  max-width: 45rem;
+  margin: 0 auto; /* Centra horizontalmente */
+  padding: 2rem; /* Añadir un pequeño padding alrededor del formulario */
+}
+
+@media (max-width: 766px) {
+   .form {
+        background-image: url("../img/IsotipoDiantum2.svg");
+        background-repeat: no-repeat;
+        background-position: bottom left -178px;
+   }
+}
+
+@media (min-width: 992px) {
+  .form {
+    margin: 0 auto 0 125px;
+  }
+}
+
+.group input {
+  border-radius: 1rem;
+  background: #f2f2f2;
+  margin: 1rem 0rem;
+  padding: 1.9rem;
+  width: 100%;
+  border: none;
+  padding-left: 5rem;
+}
+
+.div-enviar input {
+  border-radius: 1rem;
+  background: #1c1c1c;
+  margin: 1rem 0rem;
+  padding: 1.9rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  color: white;
+  font-weight: 700;
+}
+
+.div-enviar input:hover {
+    cursor: pointer;
+}
+
+
+.group-4 {
+  position: relative;
+  margin: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.group-4 p {
+  font-weight: 700;
+}
+
+.group-4 span {
+  font-weight: 300;
+}
+
+.subtract {
+  position: absolute;
+  left: 50%;
+  top: 1.2rem;
+  translate: -50% -50%;
+  width: 100%;
+}
+
+.con-otros {
+  display: flex;
+  flex-direction: column;
+}
+
+.con-otros a {
+  border-radius: 1rem;
+  border: 0.1rem solid #1c1c1c;
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0rem;
+  padding: 1rem;
+  width: 100%;
+  text-decoration: none;
+}
+
+.separacion {
+  display: flex;
+  gap: 1rem;
+}
+
+.field-group {
+  display: flex; /* Hace que los elementos se coloquen en una fila */
+  align-items: center; /* Centra verticalmente los elementos */
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  left: 1.5rem; /* Ajusta el margen izquierdo del icono */
+}
+
+.icon i {
+  margin-right: 1rem;
+}
+
+/* .input-field::placeholder {
+    padding-left: 10px; /* Ajusta el padding izquierdo del placeholder
+} */
+
+.probando-img {
+  background-image: url("../img/imagen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 15rem;
+  box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
+}
+
+@media (min-width: 768px) {
+  .probando-img {
+    height: 20rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .probando-img {
+    height: 100%;
+    max-width: 90%;
+    border-radius: 35px;
+  }
+}
+
+.position-img {
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .icon-diantum {
+    position: absolute;
+    top: 241.2px;
+    left: -173px;
+    background-image: url("../img/IsotipoDiantum2.svg");
+    background-repeat: no-repeat;
+    width: 50%;
+    height: 100%;
+  }
+}
