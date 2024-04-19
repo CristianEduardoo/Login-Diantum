@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,67 +21,73 @@
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Smooch+Sans&display=swap"> -->
 </head>
-<body>
-    <div class="principal contenedor">
-        <section class="section1 position-img">
-            <form class="form" action="" method="POST" onsubmit="return validateForm()">
-                <h1>Bienvenido</h1>
-                <p>Estamos encantados de verte de vuelta</p>
-                <div class="group">
-                    <div class="field-group">
-                        <div class="icon">
-                            <i class="fa-regular fa-user"></i>
+
+<body class="position-img">
+    <div class="contenedor">
+        <div class="principal">
+            <section class="section1">
+                    <form class="form" action="" method="POST" onsubmit="return validateForm()">
+                        <h1>Bienvenido</h1>
+                        <p>Estamos encantados de verte de vuelta</p>
+                        <div class="group">
+                            <div class="field-group">
+                                <div class="icon">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                                <input class="input-field" id="user" type="text" name="user"
+                                    placeholder="Nombre de usuario">
+                            </div>
+                            <!-- aqui el bloque de error de user -->
                         </div>
-                        <input class="input-field" id="user" type="text" name="user" placeholder="Nombre de usuario">
-                    </div>
-                    <!-- aqui el bloque de error de user -->
-                </div>
-                
-                <div class="group">
-                    <div class="field-group">
-                        <div class="icon"> 
-                            <i class="fa-solid fa-lock"></i>
+
+                        <div class="group">
+                            <div class="field-group">
+                                <div class="icon">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <input class="input-field" id="password" type="password" name="password"
+                                    placeholder="Contraseña">
+                            </div>
+                            <!-- aqui el bloque de error de password -->
                         </div>
-                        <input class="input-field" id="password" type="password" name="password" placeholder="Contraseña">
-                    </div>
-                    <!-- aqui el bloque de error de password -->
-                </div>
 
-                <div class="olvidaste">
-                    <a href="https://myaccount.google.com/" target="_blank">¿Olvidaste la contraseña?</a>
-                </div>
-
-                <div class="div-enviar">
-                    <input class="enviar" type="submit" value="Iniciar Sesión">
-                </div>
-
-                <div class="group-4">
-                    <p>Login <span>con otros</span></p>
-                    <img class="subtract" src="./img/subtract_x2.svg" />
-                </div>
-
-                <div class="con-otros">
-                    <a class="btn-gogle" href="https://myaccount.google.com/" target="_blank">
-                        <div class="separacion">
-                            <img src="img/googleicon149-oyh4.svg" alt="GoogleIcon149" /><span>Login con Google</span>
+                        <div class="olvidaste">
+                            <a href="https://myaccount.google.com/" target="_blank">¿Olvidaste la contraseña?</a>
                         </div>
-                    </a>
-                    
-                    <a class="btn-facebook" href="https://www.facebook.com/" target="_blank">
-                        <div class="separacion">
-                            <img src="img/square-facebook.svg" alt="GoogleIcon149" /><span>Login con Facebook</span>
-                        </div>
-                    </a>
-                </div>
 
-                <!--begin::Error messages-->
-                <!-- <div id="errorMessages" class="error-message"></div> -->
-                <!--end::Error messages-->
-            </form>
-        </section>
-        <section class="section2">
-            <div class="probando-img"></div>
-        </section>
+                        <div class="div-enviar">
+                            <input class="enviar" type="submit" value="Iniciar Sesión">
+                        </div>
+
+                        <div class="group-4">
+                            <p>Login <span>con otros</span></p>
+                            <img class="subtract" src="./img/subtract_x2.svg" />
+                        </div>
+
+                        <div class="con-otros">
+                            <a class="btn-gogle" href="https://myaccount.google.com/" target="_blank">
+                                <div class="separacion">
+                                    <img src="img/googleicon149-oyh4.svg" alt="GoogleIcon149" /><span>Login con
+                                        Google</span>
+                                </div>
+                            </a>
+
+                            <a class="btn-facebook" href="https://www.facebook.com/" target="_blank">
+                                <div class="separacion">
+                                    <img src="img/square-facebook.svg" alt="GoogleIcon149" /><span>Login con Facebook</span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <!--begin::Error messages-->
+                        <!-- <div id="errorMessages" class="error-message"></div> -->
+                        <!--end::Error messages-->
+                    </form>
+            </section>
+            <section class="section2">
+                <div class="probando-img"></div>
+            </section>
+        </div>
     </div>
     <script src="./js/script.js"></script>
 </body>
