@@ -33,11 +33,11 @@ p {
 
 /* ------------------------------------------------------------------------------------- */
 
-.contenedor{
+/* .contenedor{
   display: grid;
   height: 100vh;
   align-items: center;
-}
+} */
 
 .principal {
   display: grid;
