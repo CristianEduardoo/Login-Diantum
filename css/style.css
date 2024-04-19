@@ -33,7 +33,7 @@ p {
 
 /* ------------------------------------------------------------------------------------- */
 
-.contenedor {
+/* .contenedor {
   display: grid;
   height: 100vh;
   align-items: center;
@@ -49,7 +49,7 @@ p {
   .contenedor {
     height: 100vh;
   }
-}
+} */
 
 .principal {
   display: grid;
@@ -95,11 +95,11 @@ p {
   }
 }
 
-/* @media (min-width: 1440px) {
+@media (min-width: 1440px) {
   .principal {
     margin: 15rem auto;
   }
-} */
+}
 
 .form {
   width: 33rem;
