@@ -33,11 +33,23 @@ p {
 
 /* ------------------------------------------------------------------------------------- */
 
-/* .contenedor{
+.contenedor {
   display: grid;
   height: 100vh;
   align-items: center;
-} */
+}
+
+@media (min-width: 390px) {
+  .contenedor {
+    height: 88vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .contenedor {
+    height: 100vh;
+  }
+}
 
 .principal {
   display: grid;
@@ -83,21 +95,21 @@ p {
   }
 }
 
-@media (min-width: 1440px) {
+/* @media (min-width: 1440px) {
   .principal {
     margin: 15rem auto;
   }
-}
+} */
 
 .form {
   width: 33rem;
   margin: 0 auto; /* Centra horizontalmente */
 }
 
-@media (min-width:768px) {
-   .form {
-      width: 40rem;
-    }
+@media (min-width: 768px) {
+  .form {
+    width: 40rem;
+  }
 }
 
 .group input {
@@ -232,16 +244,16 @@ p {
   }
 }
 
-.error-message{
+.error-message {
   color: red;
 }
 
-.olvidaste{
+.olvidaste {
   display: flex;
   justify-content: end;
   margin: 1rem auto;
 }
 
-.olvidaste a{
+.olvidaste a {
   text-decoration: none;
 }
