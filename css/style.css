@@ -14,11 +14,11 @@ body {
   font-size: 16px; /* Con estas 2 lineas (html y body) ya podemos escribir codigo en rem. 1rem = 10px... 60px=6rem */
   padding: 0; /* Eliminar el padding */
   margin: 0; /* Eliminar el margin */
-  font-family: "Poppins", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
 }
 
 h1 {
-  font-family: "Smooch Sans";
+  /* font-family: "Smooch Sans"; */
   font-weight: 700;
   text-align: center;
   padding: 0;
@@ -49,19 +49,11 @@ p {
   grid-row: 2/3;
 }
 
-/* .section2 img {
-  width: 100%;
-  margin: 0 auto;
-  box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
-  height: 15rem;
-}
-*/
-
 @media (min-width: 992px) {
   .principal {
     display: flex;
     gap: 0rem;
-    margin: 3rem auto;
+    margin: 2rem auto;
   }
 
   .section1 {
@@ -78,24 +70,16 @@ p {
   }
 }
 
+@media (min-width: 1440px) {
+  .principal {
+    margin: 15rem auto;
+  }
+}
+
 .form {
   max-width: 45rem;
   margin: 0 auto; /* Centra horizontalmente */
   padding: 2rem; /* Añadir un pequeño padding alrededor del formulario */
-}
-
-@media (max-width: 766px) {
-   .form {
-        background-image: url("../img/IsotipoDiantum2.svg");
-        background-repeat: no-repeat;
-        background-position: bottom left -178px;
-   }
-}
-
-@media (min-width: 992px) {
-  .form {
-    margin: 0 auto 0 125px;
-  }
 }
 
 .group input {
@@ -121,9 +105,8 @@ p {
 }
 
 .div-enviar input:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 
 .group-4 {
   position: relative;
@@ -169,6 +152,7 @@ p {
 .separacion {
   display: flex;
   gap: 1rem;
+  align-items: center;
 }
 
 .field-group {
@@ -180,15 +164,12 @@ p {
 .icon {
   position: absolute;
   left: 1.5rem; /* Ajusta el margen izquierdo del icono */
+  /* bottom: 2.5rem */
 }
 
 .icon i {
   margin-right: 1rem;
 }
-
-/* .input-field::placeholder {
-    padding-left: 10px; /* Ajusta el padding izquierdo del placeholder
-} */
 
 .probando-img {
   background-image: url("../img/imagen.png");
@@ -196,7 +177,7 @@ p {
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
-  height: 15rem;
+  height: 100%;
   box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
 }
 
@@ -215,7 +196,9 @@ p {
 }
 
 .position-img {
-  position: relative;
+  background-image: url("../img/IsotipoDiantum2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom left -153px;
 }
 
 @media (min-width: 768px) {
@@ -228,4 +211,18 @@ p {
     width: 50%;
     height: 100%;
   }
+}
+
+.error-message{
+  color: red;
+}
+
+.olvidaste{
+  display: flex;
+  justify-content: end;
+  margin: 1rem auto;
+}
+
+.olvidaste a{
+  text-decoration: none;
 }

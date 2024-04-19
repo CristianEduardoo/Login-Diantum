@@ -6,6 +6,7 @@
     <meta name="author" content="Castro Vargas Cristian Eduardo" />
     <meta name="description" content="Login-Diantum" />
     <title>Diantum</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/46cf9b25f7.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,25 +15,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css" />
+    <!-- laura -->
+    <!-- <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Smooch+Sans&display=swap"> -->
 </head>
 <body>
-    <div class="principal">
+    <div class="principal contenedor">
         <section class="section1 position-img">
-            <form class="form" action="" method="POST">
+            <form class="form" action="" method="POST" onsubmit="return validateForm()">
                 <h1>Bienvenido</h1>
                 <p>Estamos encantados de verte de vuelta</p>
-                <div class="group field-group">
-                    <div class="icon">
-                        <i class="fa-regular fa-user"></i>
+                <div class="group">
+                    <div class="field-group">
+                        <div class="icon">
+                            <i class="fa-regular fa-user"></i>
+                        </div>
+                        <input class="input-field" id="user" type="text" name="user" placeholder="Nombre de usuario">
                     </div>
-                    <input class="input-field" id="user" type="text" name="user" placeholder="Nombre de usuario">
+                    <!-- aqui el bloque de error de user -->
                 </div>
                 
-                <div class="group field-group">
-                    <div class="icon"> 
-                        <i class="fa-solid fa-lock"></i>
+                <div class="group">
+                    <div class="field-group">
+                        <div class="icon"> 
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                        <input class="input-field" id="password" type="password" name="password" placeholder="Contraseña">
                     </div>
-                    <input class="input-field" id="password" type="password" name="password" placeholder="Contraseña">
+                    <!-- aqui el bloque de error de password -->
+                </div>
+
+                <div class="olvidaste">
+                    <a href="https://myaccount.google.com/" target="_blank">¿Olvidaste la contraseña?</a>
                 </div>
 
                 <div class="div-enviar">
@@ -56,14 +71,18 @@
                             <img src="img/square-facebook.svg" alt="GoogleIcon149" /><span>Login con Facebook</span>
                         </div>
                     </a>
-                </div>         
+                </div>
+
+                <!--begin::Error messages-->
+                <!-- <div id="errorMessages" class="error-message"></div> -->
+                <!--end::Error messages-->
             </form>
-            <div class="icon-diantum"></div>
         </section>
         <section class="section2">
             <div class="probando-img"></div>
         </section>
     </div>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
