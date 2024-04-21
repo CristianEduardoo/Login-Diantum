@@ -2,26 +2,31 @@
 <html lang="en">
 
 <head>
+    <!--=============== Metaetiquetas ===============-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="author" content="Castro Vargas Cristian Eduardo" />
     <meta name="description" content="Login-Diantum" />
     <title>Diantum</title>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://kit.fontawesome.com/46cf9b25f7.js" crossorigin="anonymous"></script>
+
+    <!--=============== Estilos de fuentes ===============-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--=============== Bibliotecas y frameworks ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/46cf9b25f7.js" crossorigin="anonymous"></script>
+
+    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./css/style.css" />
-    <!-- laura -->
-    <!-- <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/all.css'>
-    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.2.0/css/fontawesome.css'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Smooch+Sans&display=swap"> -->
 </head>
 
+   
 <body class="position-img">
     <div class="contenedor">
         <div class="principal">
@@ -31,22 +36,17 @@
                     <p>Estamos encantados de verte de vuelta</p>
                     <div class="group">
                         <div class="field-group">
-                            <div class="icon">
-                                <i class="fa-regular fa-user"></i>
-                            </div>
-                            <input class="input-field" id="user" type="text" name="user"
-                                placeholder="Nombre de usuario">
+                            <i class="fa-regular fa-user icon"></i>
+                            <input class="input-field" id="user" type="text" name="user" placeholder="Nombre de usuario">
                         </div>
                         <!-- aqui el bloque de error de user -->
                     </div>
 
                     <div class="group">
                         <div class="field-group">
-                            <div class="icon">
-                                <i class="fa-solid fa-lock"></i>
-                            </div>
-                            <input class="input-field" id="password" type="password" name="password"
-                                placeholder="Contraseña">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input class="input-field" id="password" type="password" name="password" placeholder="Contraseña">
+                            <i class="fa-regular fa-eye-slash login__eye" id="login-eye"></i>
                         </div>
                         <!-- aqui el bloque de error de password -->
                     </div>

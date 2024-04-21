@@ -184,3 +184,32 @@ function submitForm(event) {
     console.log("Formulario inválido. No se puede enviar.");
   }
 }
+
+
+
+/*=============== SHOW HIDDEN - PASSWORD ===============*/
+const showHiddenPass = (password, loginEye) => {
+  const input = document.getElementById(password),
+    iconEye = document.getElementById(loginEye);
+
+  iconEye.addEventListener("click", () => {
+    // Change password to text
+    if (input.type === "password") {
+      // Switch to text
+      input.type = "text";
+
+      // Icon change
+      iconEye.classList.add("fa-eye");
+      iconEye.classList.remove("fa-eye-slash");
+    } else {
+      // Change to password
+      input.type = "password";
+
+      // Icon change
+      iconEye.classList.remove("fa-eye");
+      iconEye.classList.add("fa-eye-slash");
+    }
+  });
+};
+
+showHiddenPass("password", "login-eye");

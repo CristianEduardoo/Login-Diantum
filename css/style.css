@@ -14,7 +14,7 @@ body {
   font-size: 16px; /* Con estas 2 lineas (html y body) ya podemos escribir codigo en rem. 1rem = 10px... 60px=6rem */
   padding: 0; /* Eliminar el padding */
   margin: 0; /* Eliminar el margin */
-  /* font-family: "Poppins", sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -23,7 +23,13 @@ h1 {
   text-align: center;
   padding: 0;
   margin: 0;
-  font-size: 7rem;
+  font-size: 5rem;
+}
+
+@media (min-width: 768px) {
+   h1{
+     font-size: 7rem;
+   }
 }
 
 p {
@@ -199,6 +205,12 @@ p {
 
 .icon i {
   margin-right: 1rem;
+}
+
+.login__eye{
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
 }
 
 .probando-img {
