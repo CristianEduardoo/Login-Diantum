@@ -118,6 +118,8 @@ p {
   width: 100%;
   border: none;
   padding-left: 5rem;
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
 }
 
 .div-enviar input {
@@ -260,17 +262,4 @@ p {
 
 .olvidaste a {
   text-decoration: none;
-}
-
-/* CSS para dispositivos móviles */
-@media only screen and (max-width: 768px) {
-  .input-field {
-    font-size: 1.6rem; /* Tamaño de la fuente ajustado para dispositivos móviles */
-  }
-}
-
-/* CSS para todos los dispositivos */
-.input-field {
-  font-size: 1.8rem; /* Tamaño de la fuente aumentado para todos los dispositivos */
-  font-family: "Poppins", sans-serif;
 }
