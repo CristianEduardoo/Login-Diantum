@@ -28,7 +28,7 @@ h1 {
 
 @media (min-width: 768px) {
    h1{
-     font-size: 7rem;
+     font-size: 6.5rem;
    }
 }
 
@@ -104,6 +104,10 @@ p {
   .form {
     width: 40rem;
   }
+}
+
+.form p{
+  margin: 0rem;
 }
 
 .group input {
@@ -256,4 +260,17 @@ p {
 
 .olvidaste a {
   text-decoration: none;
+}
+
+/* CSS para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .input-field {
+    font-size: 1.6rem; /* Tamaño de la fuente ajustado para dispositivos móviles */
+  }
+}
+
+/* CSS para todos los dispositivos */
+.input-field {
+  font-size: 1.8rem; /* Tamaño de la fuente aumentado para todos los dispositivos */
+  font-family: "Poppins", sans-serif;
 }
