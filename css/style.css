@@ -18,7 +18,7 @@ body {
 }
 
 h1 {
-  /* font-family: "Smooch Sans"; */
+  /* font-family: "Smooch Sans", sans-serif; */
   font-weight: 700;
   text-align: center;
   padding: 0;
@@ -39,23 +39,17 @@ p {
 
 /* ------------------------------------------------------------------------------------- */
 
-/* .contenedor {
+ .contenedor {
   display: grid;
   height: 100vh;
-  align-items: center;
-}
-
-@media (min-width: 390px) {
-  .contenedor {
-    height: 88vh;
-  }
+  align-items: normal;
 }
 
 @media (min-width: 992px) {
   .contenedor {
-    height: 100vh;
+    align-items: center;
   }
-} */
+}
 
 .principal {
   display: grid;
@@ -98,12 +92,6 @@ p {
     max-width: 50%;
     width: 100%;
     height: 60rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .principal {
-    margin: 15rem auto;
   }
 }
 
