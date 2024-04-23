@@ -13,7 +13,8 @@
     <!--=============== Estilos de fuentes ===============-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Smooch+Sans&display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Smooch+Sans&display=swap">
 
     <!--=============== Bibliotecas y frameworks ===============-->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -22,26 +23,31 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
-   
+
 <body class="position-img">
-    <div class="contenedor">
-        <div class="principal">
-            <section class="section1">
+    <div class="principal">
+        <section class="section1">
+            <div class="probando-img"></div>
+        </section>
+        <section class="section2">
+            <div class="">
                 <form class="form" action="" method="POST" onsubmit="return validateForm()">
                     <h1>Bienvenido</h1>
                     <p>Estamos encantados de verte de vuelta</p>
-                    <div class="group">
+                    <div class="group login-input">
                         <div class="field-group">
                             <i class="fa-regular fa-user icon"></i>
-                            <input class="input-field" id="user" type="text" name="user" placeholder="Nombre de usuario">
+                            <input class="input-field" id="user" type="email" name="user"
+                                placeholder="Nombre de usuario">
                         </div>
                         <!-- aqui el bloque de error de user -->
                     </div>
 
-                    <div class="group">
+                    <div class="group login-input">
                         <div class="field-group">
                             <i class="fa-solid fa-lock icon"></i>
-                            <input class="input-field" id="password" type="password" name="password" placeholder="Contraseña">
+                            <input class="input-field" id="password" type="password" name="password"
+                                placeholder="Contraseña">
                             <i class="fa-regular fa-eye-slash login__eye" id="login-eye"></i>
                         </div>
                         <!-- aqui el bloque de error de password -->
@@ -51,7 +57,7 @@
                         <a href="https://myaccount.google.com/" target="_blank">¿Olvidaste la contraseña?</a>
                     </div>
 
-                    <div class="div-enviar">
+                    <div class="group div-enviar">
                         <input class="enviar" type="submit" value="Iniciar Sesión">
                     </div>
 
@@ -75,13 +81,9 @@
                         </a>
                     </div>
                 </form>
-            </section>
-            <section class="section2">
-                <div class="probando-img"></div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
-
     <!--=============== JavaScript personalizado ===============-->
     <script src="./js/script.js"></script>
 </body>

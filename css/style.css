@@ -1,7 +1,7 @@
 /* ------------------------------------- GLOBALES --------------------------------------- */
 html {
-  font-size: 62.5%; /* truco para formatear la pag y usar la unidad de medida rem, en html y body */
-  box-sizing: border-box; /* box-sizing, Vine de PaulIrishWeb para facilitar el modelo caja en css "box model"  */
+  font-size: 62.5%;
+  box-sizing: border-box;
 }
 
 *,
@@ -11,103 +11,98 @@ html {
 }
 
 body {
-  font-size: 16px; /* Con estas 2 lineas (html y body) ya podemos escribir codigo en rem. 1rem = 10px... 60px=6rem */
-  padding: 0; /* Eliminar el padding */
-  margin: 0; /* Eliminar el margin */
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
   font-family: "Poppins", sans-serif;
 }
 
 h1 {
   /* font-family: "Smooch Sans", sans-serif; */
-  font-weight: 700;
   text-align: center;
-  padding: 0;
-  margin: 0;
-  font-size: 5rem;
-}
+} 
 
-@media (min-width: 768px) {
-   h1{
-     font-size: 6.5rem;
-   }
-}
-
-p {
+p{
   text-align: center;
-  margin-top: 0rem;
 }
 
-/* ------------------------------------------------------------------------------------- */
-
- .contenedor {
+.contenedor {
   display: grid;
-  height: 100vh;
-  align-items: normal;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* min-height: 100vh; */
+  max-width: 120rem;
+  margin: 0 auto; /* Centra el contenedor en la pantalla */
 }
 
-@media (min-width: 992px) {
-  .contenedor {
-    align-items: center;
-  }
+/* ------------------------------------- Login --------------------------------------- */
+
+.principal{
+  min-height: 100vh;
 }
 
-.principal {
-  display: grid;
-  gap: 3.5rem;
+.section1, .section2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
 }
 
-@media (min-width: 768px) {
-  .principal {
-    gap: 6rem;
-  }
+.section1{
+  margin-bottom: 6rem ;
 }
 
-.section1 {
+.probando-img {
+  background-image: url("../img/imagen.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   width: 100%;
-  margin: 0 auto;
-  grid-row: 2/3;
-  height: 65rem;
+  min-height: 15rem;
+  box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
+  border-bottom-left-radius: 35px;
+  border-bottom-right-radius: 35px;
 }
 
-@media (min-width: 992px) {
-  .principal {
-    display: flex;
-    gap: 0rem;
-    /* margin: 2rem auto; */
-    max-height: 60rem;
-  }
+@media (min-width:992px) {
+   .principal{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-  .section1 {
-    max-width: 50%;
-    width: 100%;
-    height: 60rem;
-    display: flex;
-    align-items: center;
-  }
+   }
 
-  .section2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 50%;
-    width: 100%;
-    height: 60rem;
-  }
+   .probando-img {
+      height: 95%;
+      width: 90%;
+      border-radius: 35px;
+   }
+
+   .section1{
+      margin-bottom: 0rem ;
+      grid-column: 2/3;
+      grid-row: -1/1;
+    }
+
 }
 
-.form {
+.form{
   width: 33rem;
-  margin: 0 auto; /* Centra horizontalmente */
+  margin: 0 auto;
 }
 
-@media (min-width: 768px) {
-  .form {
-    width: 40rem;
-  }
+@media (min-width:768px) {
+   .form{
+      width: 40rem;
+    }
 }
 
-.form p{
+.form h1, p{
   margin: 0rem;
+}
+
+.form h1{
+  font-size: 5.5rem;
 }
 
 .group input {
@@ -117,19 +112,19 @@ p {
   padding: 1.5rem;
   width: 100%;
   border: none;
+}
+
+.login-input input{
   padding-left: 5rem;
+}
+
+.input-field{
   font-size: 1.6rem;
   font-family: "Poppins", sans-serif;
 }
 
 .div-enviar input {
-  border-radius: 1rem;
   background: #1c1c1c;
-  margin: 1rem 0rem;
-  padding: 1.9rem;
-  width: 100%;
-  box-sizing: border-box;
-  border: none;
   color: white;
   font-weight: 700;
 }
@@ -161,11 +156,7 @@ p {
   top: 1.2rem;
   translate: -50% -50%;
   width: 100%;
-}
-
-.con-otros {
-  display: flex;
-  flex-direction: column;
+  height: 1rem;
 }
 
 .con-otros a {
@@ -194,7 +185,6 @@ p {
 .icon {
   position: absolute;
   left: 1.5rem; /* Ajusta el margen izquierdo del icono */
-  /* bottom: 2.5rem */
 }
 
 .icon i {
@@ -207,53 +197,6 @@ p {
   cursor: pointer;
 }
 
-.probando-img {
-  background-image: url("../img/imagen.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 100%;
-  height: 15rem;
-  box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
-}
-
-@media (min-width: 768px) {
-  .probando-img {
-    height: 20rem;
-  }
-}
-
-@media (min-width: 992px) {
-  .probando-img {
-    height: 100%;
-    max-width: 90%;
-    border-radius: 35px;
-    margin: auto;
-  }
-}
-
-.position-img {
-  background-image: url("../img/IsotipoDiantum2.svg");
-  background-repeat: no-repeat;
-  background-position: center left -157px;
-}
-
-@media (min-width: 768px) {
-  .icon-diantum {
-    position: absolute;
-    top: 241.2px;
-    left: -173px;
-    background-image: url("../img/IsotipoDiantum2.svg");
-    background-repeat: no-repeat;
-    width: 50%;
-    height: 100%;
-  }
-}
-
-.error-message {
-  color: red;
-}
-
 .olvidaste {
   display: flex;
   justify-content: end;
@@ -262,4 +205,16 @@ p {
 
 .olvidaste a {
   text-decoration: none;
+}
+
+.position-img {
+  background-image: url("../img/IsotipoDiantum2.svg");
+  background-repeat: no-repeat;
+  background-position: center left -157px;
+}
+
+/*=============== Errores ===============*/
+
+.error-message {
+  color: red;
 }

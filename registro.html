@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--=============== Metaetiquetas ===============-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta name="author" content="Castro Vargas Cristian Eduardo" />
+    <meta name="description" content="Login-Diantum" />
+    <title>Registro-Diantum</title>
+
+    <!--=============== Estilos de fuentes ===============-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Smooch+Sans&display=swap">
+
+    <!--=============== Bibliotecas y frameworks ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://kit.fontawesome.com/46cf9b25f7.js" crossorigin="anonymous"></script>
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body class="position-img">
+    <div class="contenedor">
+        <div class="principal">
+            <section class="section1 bonus-section">
+                <form class="form">
+                    <h1>Registro</h1>
+                    <p>Rellena todos los campos</p>
+                    <div class="group">
+                        <div class="field-group">
+                            <input class="input-field" id="name-user" type="text" name="name-user" placeholder="Nombre de usuario">
+                        </div>
+                        <div class="field-group">
+                            <input class="input-field" id="name-user" type="text" name="name" placeholder="Nombre">
+                        </div>
+                        <div class="field-group">
+                            <input class="input-field" id="lastname-user" type="text" name="lastname" placeholder="Apellidos">
+                        </div>
+                        <div class="field-group">
+                            <input class="input-field" id="email-user" type="email" name="email-user" placeholder="Correo electrónico">
+                        </div>
+                        <div class="field-group">
+                            <input class="input-field" id="phone-user" type="tel" name="phone-user" placeholder="Télefono">
+                        </div>
+                        <div class="field-group">
+                            <input class="input-field" id="password-user" type="password" name="password-user" placeholder="Contraseña">
+                        </div>
+                        <div class="field-group">
+                            <input class="input-field" id="password-user" type="password" name="password-user" placeholder="Repita contraseña">
+                        </div>
+                    </div>
+                    <div class="chekinput">
+                        <label><input id="terminos" type="checkbox" name="terminos">He aceptado los terminos</label>
+                    </div>
+                    <div class="div-enviar">
+                        <input class="enviar" type="submit" value="Registrate">
+                    </div>
+                    <div>
+                        <p>¿Ya dispones de una cuenta? Inicia Sesión</p>
+                    </div>
+                    <div>
+                        <p>Terminos y condiciones</p>
+                    </div>
+                </form>
+            </section>
+            <section class="section2 bonus-section">
+                <div class="probando-img"></div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
