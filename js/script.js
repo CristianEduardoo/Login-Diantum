@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Enlazar la función submitForm al evento de clic del botón de envío
   const submitButton = document.querySelector(".enviar");
-  submitButton.addEventListener("click", submitForm);
+  submitButton.addEventListener("click", submitForm); /* valida el envio */
 });
 
 // Función para añadir eventos de escucha a los campos del formulario
@@ -16,7 +16,7 @@ function addFieldListeners() {
     input.addEventListener("input", () => {
       const fieldValue = input.value.trim();
       if (fieldValue) {
-        clearFieldError(fieldName);
+        //clearFieldError(fieldName);
         validateField(fieldName, fieldValue);
       }
     });
@@ -24,15 +24,6 @@ function addFieldListeners() {
 }
 
 // Función para limpiar los mensajes de error de un campo específico
-/* function clearFieldError(fieldName) {
-  const field = document.querySelector(`input[name="${fieldName}"]`);
-  const errorContainer = field.parentNode.querySelector(".error-message");
-  if (errorContainer) {
-    errorContainer.remove();
-    field.classList.remove("is-invalid");
-  }
-} */
-
 function clearFieldError(fieldName) {
   const field = document.querySelector(`input[name="${fieldName}"]`);
   const groupDiv = field.closest(".group"); // Encuentra el div padre con la clase 'group'
@@ -42,7 +33,6 @@ function clearFieldError(fieldName) {
     field.classList.remove("is-invalid");
   }
 }
-
 
 function validateField(fieldName, fieldValue) {
   clearFieldError(fieldName);
@@ -72,8 +62,7 @@ function isValidEmail(email) {
 
 // Función para validar el formato de contraseña
 function isValidPassword(password) {
-  const passwordRegex =
-    /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.-])[A-Za-z\d@$!%*#?&.-]{8,}$/;
+  const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&.-])[A-Za-z\d@$!%*#?&.-]{8,}$/;
   return passwordRegex.test(password);
 }
 
@@ -107,26 +96,6 @@ function clearErrors() {
 }
 
 // Función para validar el formulario
-/* function validateForm() {
-  clearErrors();
-
-  const userField = document.getElementById("user");
-  const passwordField = document.getElementById("password");
-
-  let isValid = true;
-
-  // Validar campo de usuario
-  const userValue = userField.value.trim();
-  const userName = userField.name;
-  validateField(userName, userValue);
-
-  // Validar campo de contraseña
-  const passwordValue = passwordField.value.trim();
-  const passwordName = passwordField.name;
-  validateField(passwordName, passwordValue);
-
-  return isValid;
-} */
 function validateForm() {
   clearErrors();
 
@@ -140,7 +109,7 @@ function validateForm() {
   const userName = userField.name;
   if (!isValidEmail(userValue)) {
     isValid = false; // Actualiza isValid a false si el correo electrónico no es válido
-    showFieldError(userName, "El campo contraseña es obligatorio.");
+    showFieldError(userName, "El campo email es obligatorio");
   }
 
   // Validar campo de contraseña
@@ -148,16 +117,13 @@ function validateForm() {
   const passwordName = passwordField.name;
   if (!isValidPassword(passwordValue)) {
     isValid = false; // Actualiza isValid a false si la contraseña no es válida
-    showFieldError(passwordName, "La contraseña debe tener al menos 8 caracteres y contener letras, números y símbolos.");
+    showFieldError(passwordName, "La contraseña debe tener al menos 8 caracteres y contener letras, números y símbolos");
   }
 
   return isValid;
 }
 
-
-
-
-// // Función para enviar el formulario a través de AJAX
+// Función para enviar el formulario a través de AJAX
 function submitForm(event) {
   event.preventDefault(); // Evitar que el formulario se envíe automáticamente
 
@@ -185,10 +151,8 @@ function submitForm(event) {
   }
 }
 
-
-
 /*=============== SHOW HIDDEN - PASSWORD ===============*/
-const showHiddenPass = (password, loginEye) => {
+function showHiddenPass(password, loginEye) {
   const input = document.getElementById(password),
     iconEye = document.getElementById(loginEye);
 

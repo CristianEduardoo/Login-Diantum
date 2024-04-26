@@ -61,8 +61,8 @@ p{
   width: 100%;
   min-height: 15rem;
   box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
-  border-bottom-left-radius: 35px;
-  border-bottom-right-radius: 35px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 @media (min-width:992px) {
@@ -109,24 +109,18 @@ p{
   border-radius: 1rem;
   background: #f2f2f2;
   margin: 1rem 0rem;
-  padding: 1.5rem;
+  padding: 1rem;
   width: 100%;
   border: none;
 }
 
 .login-input input{
-  padding-left: 5rem;
+  padding-left: 4rem;
 }
 
 .input-field{
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
-}
-
-.div-enviar input {
-  background: #1c1c1c;
-  color: white;
-  font-weight: 700;
 }
 
 .div-enviar input:hover {
@@ -187,10 +181,6 @@ p{
   left: 1.5rem; /* Ajusta el margen izquierdo del icono */
 }
 
-.icon i {
-  margin-right: 1rem;
-}
-
 .login__eye{
   position: absolute;
   right: 15px;
@@ -200,7 +190,10 @@ p{
 .olvidaste {
   display: flex;
   justify-content: end;
-  margin: 1rem auto;
+}
+
+.olvidaste-rigistro{
+  gap: 1rem;
 }
 
 .olvidaste a {
@@ -217,4 +210,41 @@ p{
 
 .error-message {
   color: red;
+  margin-top: -1rem;
+  font-size: 12px;
+}
+
+/*=============== Boton envio/registrar ===============*/
+
+.div-enviar input {
+  background: #1c1c1c;
+  color: white;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+/* ------------------------------------- Registro --------------------------------------- */
+.form-register{
+  width: 33rem;
+  margin: 0 auto;
+}
+
+@media (min-width:768px) {
+  .form-register{
+    width: 50rem;
+  }
+
+  .divide-campos{
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+.form-register h1, p{
+  margin: 0rem;
+}
+
+.form-register h1{
+  font-size: 5.5rem;
 }

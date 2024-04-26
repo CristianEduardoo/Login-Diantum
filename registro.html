@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--=============== Metaetiquetas ===============-->
     <meta charset="UTF-8">
@@ -22,54 +23,101 @@
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="./css/style.css" />
 </head>
+
 <body class="position-img">
-    <div class="contenedor">
-        <div class="principal">
-            <section class="section1 bonus-section">
-                <form class="form">
+    <div class="principal">
+        <section class="section1">
+            <div class="probando-img"></div>
+        </section>
+        <section class="section2">
+            <div class="">
+                <form class="form-register" action="" method="POST" onsubmit="return validateFormRegister()">
                     <h1>Registro</h1>
                     <p>Rellena todos los campos</p>
-                    <div class="group">
+                    <div class="group login-input">
                         <div class="field-group">
-                            <input class="input-field" id="name-user" type="text" name="name-user" placeholder="Nombre de usuario">
+                            <i class="fa-solid fa-user icon"></i>
+                            <input class="input-field" id="user-name" type="email" name="user-name"
+                                placeholder="Nombre de usuario">
                         </div>
-                        <div class="field-group">
-                            <input class="input-field" id="name-user" type="text" name="name" placeholder="Nombre">
+                        <!-- aqui el bloque de error de user -->
+                    </div>
+
+                    <div class="divide-campos">
+                        <div class="group login-input">
+                            <div class="field-group">
+                                <i class="fa-regular fa-user icon"></i>
+                                <input class="input-field" id="name" type="text" name="name" placeholder="Nombre">
+                            </div>
+                            <!-- aqui el bloque de error de name -->
                         </div>
-                        <div class="field-group">
-                            <input class="input-field" id="lastname-user" type="text" name="lastname" placeholder="Apellidos">
-                        </div>
-                        <div class="field-group">
-                            <input class="input-field" id="email-user" type="email" name="email-user" placeholder="Correo electrónico">
-                        </div>
-                        <div class="field-group">
-                            <input class="input-field" id="phone-user" type="tel" name="phone-user" placeholder="Télefono">
-                        </div>
-                        <div class="field-group">
-                            <input class="input-field" id="password-user" type="password" name="password-user" placeholder="Contraseña">
-                        </div>
-                        <div class="field-group">
-                            <input class="input-field" id="password-user" type="password" name="password-user" placeholder="Repita contraseña">
+                        
+                        <div class="group login-input">
+                            <div class="field-group">
+                                <i class="fa-regular fa-user icon"></i>
+                                <input class="input-field" id="lastname" type="text" name="lastname" placeholder="Apellidos">
+                            </div>
+                            <!-- aqui el bloque de error de apellidos -->
                         </div>
                     </div>
-                    <div class="chekinput">
+
+                    <div class="divide-campos">
+                        <div class="group login-input">
+                            <div class="field-group">
+                                <i class="fa-regular fa-envelope icon"></i>
+                                <input class="input-field" id="email" type="email" name="email" placeholder="Correo electrónico">
+                            </div>
+                            <!-- aqui el bloque de error de email -->
+                        </div>
+                        
+                        <div class="group login-input">
+                            <div class="field-group">
+                                <i class="fa-solid fa-phone icon"></i>
+                                <input class="input-field" id="tel" type="tel" name="tel" placeholder="Télefono">
+                            </div>
+                            <!-- aqui el bloque de error de telefono -->
+                        </div>
+                    </div>
+
+                    <div class="group login-input">
+                        <div class="field-group">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input class="input-field" id="password1" type="password" name="password1"
+                                placeholder="Contraseña">
+                            <i class="fa-regular fa-eye-slash login__eye" id="login-eye1"></i>
+                        </div>
+                        <!-- aqui el bloque de error de password1 -->
+                    </div>
+
+                    <div class="group login-input">
+                        <div class="field-group">
+                            <i class="fa-solid fa-lock icon"></i>
+                            <input class="input-field" id="password2" type="password" name="password2"
+                                placeholder="Repita contraseña">
+                            <i class="fa-regular fa-eye-slash login__eye" id="login-eye2"></i>
+                        </div>
+                        <!-- aqui el bloque de error de password no coinciden-->
+                    </div>
+
+                    <div class="">
                         <label><input id="terminos" type="checkbox" name="terminos">He aceptado los terminos</label>
                     </div>
-                    <div class="div-enviar">
+
+                    <div class="group div-enviar">
                         <input class="enviar" type="submit" value="Registrate">
                     </div>
                     <div>
-                        <p>¿Ya dispones de una cuenta? Inicia Sesión</p>
+                        <p>¿Ya dispones de una cuenta? <a href="/">Inicia Sesión </a></p>
                     </div>
                     <div>
-                        <p>Terminos y condiciones</p>
+                        <p><a href="/">Terminos y condiciones</a></p>
                     </div>
                 </form>
-            </section>
-            <section class="section2 bonus-section">
-                <div class="probando-img"></div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
+    <!--=============== JavaScript personalizado ===============-->
+    <script src="./js/script_register.js"></script>
 </body>
+
 </html>
