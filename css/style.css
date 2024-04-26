@@ -61,8 +61,6 @@ p{
   width: 100%;
   min-height: 15rem;
   box-shadow: 0rem 1rem 1rem rgba(32, 32, 32, 0.5);
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
 }
 
 @media (min-width:992px) {
